@@ -26,7 +26,7 @@ if (!image) {
 // register shapefile plugin
 if (mapnik.register_default_input_plugins) mapnik.register_default_input_plugins();
 
-var map = new mapnik.Map(600, 400);
+var map = new mapnik.Map(1920, 1080);
 
 map.loadSync(stylesheet);
 map.zoomAll();

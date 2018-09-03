@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Map srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+     background-color="#4286f4">
+
+    <Style name="style_admin_shape">
+        <Rule>
+            <PolygonSymbolizer fill="#ffc877"/>
+        </Rule>
+    </Style>
+
+    <Style name="style_admin_country_bound_land">
+        <Rule>
+            <LineSymbolizer stroke="#a8905f" stroke-width=".8"/>
+        </Rule>
+    </Style>
+
+    <Style name="style_admin_country_bound_pacific">
+        <Rule>
+            <LineSymbolizer stroke="#bacbfc" stroke-width=".5"/>
+        </Rule>
+    </Style>
+
+    <Layer name="admin_shape"
+           srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+        <StyleName>style_admin_shape</StyleName>
+        <Datasource>
+            <Parameter name="file">
+                data/naturalearthdata/110m_cultural/ne_110m_admin_0_countries_lakes.shp
+            </Parameter>
+            <Parameter name="encoding">iso-8859-1</Parameter>
+            <Parameter name="type">shape</Parameter>
+        </Datasource>
+    </Layer>
+
+
+
+    <Layer name="admin_country_bound_land"
+           srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+        <StyleName>style_admin_country_bound_land</StyleName>
+        <Datasource>
+            <Parameter name="file">
+                data/naturalearthdata/110m_cultural/ne_110m_admin_0_boundary_lines_land.shp
+            </Parameter>
+            <Parameter name="encoding">iso-8859-1</Parameter>
+            <Parameter name="type">shape</Parameter>
+        </Datasource>
+    </Layer>
+
+
+
+    <Layer name="admin_country_bound_pacific"
+           srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+        <StyleName>style_admin_country_bound_pacific</StyleName>
+        <Datasource>
+            <Parameter name="file">
+                data/naturalearthdata/110m_cultural/ne_110m_admin_0_pacific_groupings.shp
+            </Parameter>
+            <Parameter name="encoding">iso-8859-1</Parameter>
+            <Parameter name="type">shape</Parameter>
+        </Datasource>
+    </Layer>
+
+</Map>
